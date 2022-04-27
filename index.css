@@ -2,15 +2,6 @@
     justify-content: center;
 }
 
-#headerPhoto {
-    background-color: #e08a1a;
-    height: 25vw;
-    width: 75vw;
-    font-weight: bolder;
-    color: #e08a1a;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfNFx2LZApDmevgfCeuww-Qyu2nwUjcXGNHA&usqp=CAU")>
-}
-
 h1 {
     font-weight: bolder;
     text-align: center;
@@ -19,24 +10,7 @@ h1 {
     color: #e08a1a;
 }
 
-#aboutBitcoin {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 400px;
-    height: 400px;
-    text-decoration:solid;
-    font-size: medium;
-    size: 0px;
-    justify-content: center;
-}
-
-
-#bitcoinOrg {
-  height: 100%;
-  color: orange;
-  line-height: 1.8;
-  text-align: center;
-  color: #e08a1a;
-  font-weight: 300;
-  width: 100%;
-  font-size: 1.25rem;
-}
+button {
+    height: 50px;
+    width: 50px;
+  }
