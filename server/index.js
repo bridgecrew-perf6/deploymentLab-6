@@ -16,7 +16,7 @@ const app = express()
 
 
 app.use(express.json())
-app.use('/style', express.static('../styles.css'))
+app.use('/style', express.static('../index.css'))
 
 let bitcoins = []
 
@@ -26,7 +26,7 @@ app.get('/', (req,res) => {
 })
 
 app.get('/style', (req,res) => {
-    res.sendFile(path.join(__dirname, '../styles.css'))
+    res.sendFile(path.join(__dirname, '../index.css'))
     rollbar.info('css file served successfully.')
 })
 
