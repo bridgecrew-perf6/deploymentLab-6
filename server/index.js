@@ -46,11 +46,11 @@ app.post('/api/bitcoin', (req, res)=>{
         rollbar.log('Reason added successfully', {author: 'Trent', type: 'manual entry'})
         res.status(200).send(bitcoins)
     } else if (name === 'bitcoin'){
-        rollbar.critical('please do not do that')
-        res.status(400).send('idiot.')
+        rollbar.critical('critical')
+        res.status(400).send('self destruct')
     } else if (name === 'because'){
-        rollbar.warning('please do not do that')
-        res.status(400).send('idiot.')
+        rollbar.warning('warning')
+        res.status(400).send('please do not do that.')
     } else {
         rollbar.error('reason already exists')
         res.status(400).send('that reason already exists')
