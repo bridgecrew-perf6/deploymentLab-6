@@ -45,7 +45,7 @@ app.post('/api/bitcoin', (req, res)=>{
         bitcoins.push(name)
         rollbar.log('Reason added successfully', {author: 'Trent', type: 'manual entry'})
         res.status(200).send(bitcoins)
-    } else if (name === ''){
+    } else if (name === 'bitcoin'){
         rollbar.critical('please do not do that')
         res.status(400).send('idiot.')
     } else {
