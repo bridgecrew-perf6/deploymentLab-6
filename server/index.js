@@ -49,7 +49,7 @@ app.post('/api/bitcoin', (req, res)=>{
         rollbar.critical('please do not do that')
         res.status(400).send('idiot.')
     } else {
-        rollbar.error('reason already exists')
+        rollbar.warning('reason already exists')
         res.status(400).send('that reason already exists')
     }
 
