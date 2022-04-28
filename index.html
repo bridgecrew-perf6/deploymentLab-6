@@ -33,13 +33,13 @@
     
             function submitHandler(e){
                 e.preventDefault()
-                axios.post('/api/student', {name: nameInput.value, })
+                axios.post('/api/bitcoin', {name: nameInput.value, })
                     .then(res => {
                         container.innerHTML = ''
                         nameInput.value = ''
     
-                        res.data.forEach(studentName => {
-                            container.innerHTML += `<p>${studentName}</p>`
+                        res.data.forEach(bitcoinName => {
+                            container.innerHTML += `<p>${bitcoinName}</p>`
                         })
                     })
                     .catch(err => {
