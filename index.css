@@ -1,6 +1,6 @@
 .body {
     justify-content: center;
-    cursor: pointer;
+    cursor: default;
 }
 
 h1 {
