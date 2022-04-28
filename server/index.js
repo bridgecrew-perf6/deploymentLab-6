@@ -41,14 +41,14 @@ app.post('/api/bitcoin', (req, res)=>{
 
     const index = bitcoins.findIndex(bitcoinName=> bitcoinName === name)
 
-    if(index === -1 && name !== ''){
+    if(index === -1 && name !== '' && name !== ' '){
         bitcoins.push(name)
         rollbar.log('Reason added successfully', {author: 'Trent', type: 'manual entry'})
         res.status(200).send(bitcoins)
     } else if (name === ''){
         rollbar.error('No reason given')
         res.status(400).send('must provide a reason.')
-    } else if (name === ''){
+    } else if (name === ' '){
         rollbar.critical('please do not do that')
         res.status(400).send('idiot.')
     } else {
