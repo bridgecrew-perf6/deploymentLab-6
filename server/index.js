@@ -20,12 +20,14 @@ app.use('/style', express.static('../styles.css'))
 
 let bitcoins = []
 
-app.get('/', (req, res) => {
+app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
+    rollbar.info('html file served successfully.')
 })
 
-app.get('/css', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.css'))
+app.get('/style', (req,res) => {
+    res.sendFile(path.join(__dirname, '../styles.css'))
+    rollbar.info('css file served successfully.')
 })
 
 app.get('/js', (req, res) => {
